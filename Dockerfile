@@ -1,6 +1,7 @@
-FROM node
-WORKDIR / client
-COPY package.json /client
-RUN npm install -g http-server
-COPY . /client
-CMD ["http-server", "-c", "-1"]
+FROM nginx:alpine
+
+RUN rm -rf /usr/share/nginx/html/*
+
+COPY . /usr/share/nginx/html
+
+EXPOSE 80
