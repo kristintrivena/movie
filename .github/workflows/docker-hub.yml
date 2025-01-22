@@ -15,7 +15,7 @@ jobs:
 
       - name: Build the Docker image
         run : |
-          docker build . -t latihan-web:latest
+          docker build . -t movie-web:latest
 
       - name: Push to Docker Hub
         run: |
